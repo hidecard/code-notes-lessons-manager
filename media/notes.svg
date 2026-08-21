@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect x="15" y="10" width="60" height="75" rx="6" fill="var(--vscode-editor-background, #1e1e1e)" stroke="var(--vscode-foreground, #cccccc)" stroke-width="3"/>
+  <path d="M15 22 L72 22" stroke="var(--vscode-foreground, #cccccc)" stroke-width="3" fill="none"/>
+  <path d="M22 35 L58 35" stroke="var(--vscode-textLink-foreground, #4ec9b0)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M22 50 L58 50" stroke="var(--vscode-descriptionForeground, #858585)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M22 65 L45 65" stroke="var(--vscode-descriptionForeground, #858585)" stroke-width="4" stroke-linecap="round"/>
+</svg>
