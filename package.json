@@ -48,6 +48,10 @@
         "title": "Code Notes: Search Notes"
       },
       {
+        "command": "codeNotes.manageCategories",
+        "title": "Code Notes: Manage Categories"
+      },
+      {
         "command": "codeNotes.captureCodeLink",
         "title": "Code Notes: Capture Current Code Link"
       },
@@ -107,6 +111,11 @@
           "command": "codeNotes.search",
           "when": "view == codeNotesExplorer",
           "group": "navigation@2"
+        },
+        {
+          "command": "codeNotes.manageCategories",
+          "when": "view == codeNotesExplorer",
+          "group": "navigation@3"
         }
       ],
       "editor/context": [
