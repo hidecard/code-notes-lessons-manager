@@ -4,48 +4,154 @@
   "description": "Organize coding lessons and notes by category, tag, and day.",
   "version": "0.0.2",
   "publisher": "ArkarYan",
-  "repository": { "type": "git", "url": "https://github.com/hidecard/code-notes-lessons-manager" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hidecard/code-notes-lessons-manager"
+  },
   "license": "MIT",
   "icon": "media/code-notes-logo.png",
-  "engines": { "vscode": "^1.85.0" },
-  "categories": ["Other"],
-  "activationEvents": ["onView:codeNotesExplorer", "onCommand:codeNotes.createNote"],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:codeNotesExplorer",
+    "onCommand:codeNotes.createNote"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "viewsContainers": {
-      "activitybar": [{ "id": "codeNotes", "title": "Code Notes" }]
+      "activitybar": [
+        {
+          "id": "codeNotes",
+          "title": "Code Notes"
+        }
+      ]
     },
     "views": {
-      "codeNotes": [{ "id": "codeNotesExplorer", "name": "Lessons & Notes" }]
+      "codeNotes": [
+        {
+          "id": "codeNotesExplorer",
+          "name": "Lessons & Notes"
+        }
+      ]
     },
     "commands": [
-      { "command": "codeNotes.createNote", "title": "Code Notes: Create Note" },
-      { "command": "codeNotes.search", "title": "Code Notes: Search Notes" },
-      { "command": "codeNotes.captureCodeLink", "title": "Code Notes: Capture Current Code Link" },
-      { "command": "codeNotes.exportJson", "title": "Code Notes: Export JSON" },
-      { "command": "codeNotes.exportMarkdown", "title": "Code Notes: Export Markdown" },
-      { "command": "codeNotes.importJson", "title": "Code Notes: Import JSON" },
-      { "command": "codeNotes.refresh", "title": "Code Notes: Refresh" },
-      { "command": "codeNotes.advancedFilter", "title": "Code Notes: Advanced Filter" },
-      { "command": "codeNotes.statistics", "title": "Code Notes: Statistics" },
-      { "command": "codeNotes.showFavorites", "title": "Code Notes: Show Favorites" },
-      { "command": "codeNotes.showArchive", "title": "Code Notes: Show Archive" },
-      { "command": "codeNotes.showTrash", "title": "Code Notes: Show Trash" },
-      { "command": "codeNotes.restore", "title": "Code Notes: Restore Note" }
+      {
+        "command": "codeNotes.createNote",
+        "title": "Code Notes: Create Note"
+      },
+      {
+        "command": "codeNotes.search",
+        "title": "Code Notes: Search Notes"
+      },
+      {
+        "command": "codeNotes.captureCodeLink",
+        "title": "Code Notes: Capture Current Code Link"
+      },
+      {
+        "command": "codeNotes.exportJson",
+        "title": "Code Notes: Export JSON"
+      },
+      {
+        "command": "codeNotes.exportMarkdown",
+        "title": "Code Notes: Export Markdown"
+      },
+      {
+        "command": "codeNotes.exportPdf",
+        "title": "Code Notes: Export Note as PDF"
+      },
+      {
+        "command": "codeNotes.importJson",
+        "title": "Code Notes: Import JSON"
+      },
+      {
+        "command": "codeNotes.refresh",
+        "title": "Code Notes: Refresh"
+      },
+      {
+        "command": "codeNotes.advancedFilter",
+        "title": "Code Notes: Advanced Filter"
+      },
+      {
+        "command": "codeNotes.statistics",
+        "title": "Code Notes: Statistics"
+      },
+      {
+        "command": "codeNotes.showFavorites",
+        "title": "Code Notes: Show Favorites"
+      },
+      {
+        "command": "codeNotes.showArchive",
+        "title": "Code Notes: Show Archive"
+      },
+      {
+        "command": "codeNotes.showTrash",
+        "title": "Code Notes: Show Trash"
+      },
+      {
+        "command": "codeNotes.restore",
+        "title": "Code Notes: Restore Note"
+      }
     ],
     "menus": {
-      "view/title": [{ "command": "codeNotes.createNote", "when": "view == codeNotesExplorer", "group": "navigation@1" }, { "command": "codeNotes.search", "when": "view == codeNotesExplorer", "group": "navigation@2" }],
-      "editor/context": [{ "command": "codeNotes.captureCodeLink", "group": "codeNotes@1" }],
-      "view/item/context": [{ "command": "codeNotes.restore", "when": "view == codeNotesExplorer && viewItem == note && resourceLangId == json", "group": "inline" }]
+      "view/title": [
+        {
+          "command": "codeNotes.createNote",
+          "when": "view == codeNotesExplorer",
+          "group": "navigation@1"
+        },
+        {
+          "command": "codeNotes.search",
+          "when": "view == codeNotesExplorer",
+          "group": "navigation@2"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "codeNotes.captureCodeLink",
+          "group": "codeNotes@1"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "codeNotes.restore",
+          "when": "view == codeNotesExplorer && viewItem == note && resourceLangId == json",
+          "group": "inline"
+        },
+        {
+          "command": "codeNotes.exportPdf",
+          "when": "view == codeNotesExplorer && viewItem == note",
+          "group": "inline"
+        }
+      ]
     },
     "configuration": {
       "title": "Code Notes & Lessons Manager",
       "properties": {
-        "codeNotes.defaultCategory": { "type": "string", "default": "General", "description": "Default category for new notes." }
+        "codeNotes.defaultCategory": {
+          "type": "string",
+          "default": "General",
+          "description": "Default category for new notes."
+        }
       }
     }
   },
-  "scripts": { "compile": "tsc -p ./", "watch": "tsc -watch -p ./", "package": "npm run compile && npx @vscode/vsce package" },
-  "devDependencies": { "@types/node": "^20.0.0", "@types/vscode": "^1.85.0", "typescript": "^5.3.0", "@vscode/vsce": "^2.24.0" }
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npm run compile && npx @vscode/vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.24.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "@types/pdfkit": "^0.17.6",
+    "pdfkit": "^0.19.1"
+  }
 }
-
