@@ -44,6 +44,14 @@
         "title": "Code Notes: Create Note"
       },
       {
+        "command": "codeNotes.openDashboard",
+        "title": "Code Notes: Open Dashboard"
+      },
+      {
+        "command": "codeNotes.quickOpen",
+        "title": "Code Notes: Quick Open Note"
+      },
+      {
         "command": "codeNotes.search",
         "title": "Code Notes: Search Notes"
       },
@@ -108,6 +116,16 @@
           "group": "navigation@1"
         },
         {
+          "command": "codeNotes.openDashboard",
+          "when": "view == codeNotesExplorer",
+          "group": "navigation@0"
+        },
+        {
+          "command": "codeNotes.quickOpen",
+          "when": "view == codeNotesExplorer",
+          "group": "navigation@0"
+        },
+        {
           "command": "codeNotes.search",
           "when": "view == codeNotesExplorer",
           "group": "navigation@2"
@@ -155,6 +173,13 @@
       }
     }
   },
+  "keybindings": [
+    {
+      "command": "codeNotes.quickOpen",
+      "key": "ctrl+alt+n",
+      "mac": "cmd+alt+n"
+    }
+  ],
   "scripts": {
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
