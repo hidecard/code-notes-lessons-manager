@@ -135,6 +135,13 @@
           "type": "string",
           "default": "General",
           "description": "Default category for new notes."
+        },
+        "codeNotes.codeTheme": {
+          "type": "string",
+          "enum": ["vscode-dark", "github-light", "dracula", "monokai", "nord", "solarized-dark", "tokyo-night"],
+          "enumDescriptions": ["VS Code Dark", "GitHub Light", "Dracula", "Monokai", "Nord", "Solarized Dark", "Tokyo Night"],
+          "default": "vscode-dark",
+          "description": "Syntax-highlighting theme used in note previews and PDF exports."
         }
       }
     }
