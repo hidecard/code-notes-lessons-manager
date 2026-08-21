@@ -2,7 +2,7 @@
   "name": "code-notes-lessons-manager",
   "displayName": "Code Notes & Lessons Manager",
   "description": "Organize coding lessons and notes by category, tag, and day.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "publisher": "ArkarYan",
   "repository": {
     "type": "git",
@@ -42,17 +42,17 @@
       {
         "command": "codeNotes.createNote",
         "title": "Code Notes: Create Note",
-        "icon": "$(add)"
+        "icon": "$(new-file)"
       },
       {
         "command": "codeNotes.openDashboard",
         "title": "Code Notes: Open Dashboard",
-        "icon": "$(dashboard)"
+        "icon": "$(home)"
       },
       {
         "command": "codeNotes.quickOpen",
         "title": "Code Notes: Quick Open Note",
-        "icon": "$(search)"
+        "icon": "$(go-to-file)"
       },
       {
         "command": "codeNotes.search",
@@ -62,7 +62,7 @@
       {
         "command": "codeNotes.manageCategories",
         "title": "Code Notes: Manage Categories",
-        "icon": "$(folder-library)"
+        "icon": "$(list-tree)"
       },
       {
         "command": "codeNotes.captureCodeLink",
@@ -79,7 +79,7 @@
       {
         "command": "codeNotes.exportPdf",
         "title": "Code Notes: Export Note as PDF",
-        "icon": "$(file-pdf)"
+        "icon": "$(export)"
       },
       {
         "command": "codeNotes.importJson",
