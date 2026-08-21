@@ -2,7 +2,7 @@
   "name": "code-notes-lessons-manager",
   "displayName": "Code Notes & Lessons Manager",
   "description": "Organize coding lessons and notes by category, tag, and day.",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "publisher": "ArkarYan",
   "repository": {
     "type": "git",
