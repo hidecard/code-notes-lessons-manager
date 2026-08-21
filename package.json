@@ -2,7 +2,7 @@
   "name": "code-notes-lessons-manager",
   "displayName": "Code Notes & Lessons Manager",
   "description": "Organize coding lessons and notes by category, tag, and day.",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "publisher": "ArkarYan",
   "repository": {
     "type": "git",
@@ -41,23 +41,28 @@
     "commands": [
       {
         "command": "codeNotes.createNote",
-        "title": "Code Notes: Create Note"
+        "title": "Code Notes: Create Note",
+        "icon": "$(add)"
       },
       {
         "command": "codeNotes.openDashboard",
-        "title": "Code Notes: Open Dashboard"
+        "title": "Code Notes: Open Dashboard",
+        "icon": "$(dashboard)"
       },
       {
         "command": "codeNotes.quickOpen",
-        "title": "Code Notes: Quick Open Note"
+        "title": "Code Notes: Quick Open Note",
+        "icon": "$(search)"
       },
       {
         "command": "codeNotes.search",
-        "title": "Code Notes: Search Notes"
+        "title": "Code Notes: Search Notes",
+        "icon": "$(search)"
       },
       {
         "command": "codeNotes.manageCategories",
-        "title": "Code Notes: Manage Categories"
+        "title": "Code Notes: Manage Categories",
+        "icon": "$(folder-library)"
       },
       {
         "command": "codeNotes.captureCodeLink",
@@ -73,7 +78,8 @@
       },
       {
         "command": "codeNotes.exportPdf",
-        "title": "Code Notes: Export Note as PDF"
+        "title": "Code Notes: Export Note as PDF",
+        "icon": "$(file-pdf)"
       },
       {
         "command": "codeNotes.importJson",
@@ -110,6 +116,11 @@
     ],
     "menus": {
       "view/title": [
+        {
+          "command": "codeNotes.exportPdf",
+          "when": "view == codeNotesExplorer",
+          "group": "navigation@0"
+        },
         {
           "command": "codeNotes.createNote",
           "when": "view == codeNotesExplorer",
